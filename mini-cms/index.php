@@ -1,6 +1,9 @@
 <?php
+//ファイルの読み込み
+require_once('inc/config.php');
+
 // データベースに接続
-$dbh = new PDO('mysql:host=localhost;dbname=mini_cms_app;charset=utf8', 'root', 'root');
+$dbh = new PDO(DSN, DB_USER, DB_PASSWORD);
 echo '接続成功！';
 ?>
 
