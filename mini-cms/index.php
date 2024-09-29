@@ -63,10 +63,16 @@ try{
 
   <dl>
     <?php  foreach($result as $post) : ?>
-    <dt><time
-        datetime="<?php echo h($post['created']) ?>"><?php echo h( date('Y年m月d日',strtotime($post['created']))); ?></time>
+    <dt>
+      <time datetime="<?php echo h($post['created']) ?>">
+        <?php echo h( date('Y年m月d日',strtotime($post['created']))); ?>
+      </time>
     </dt>
-    <dd><?php echo h($post['title']) ?></dd>
+    <dd>
+      <a href="detail.php?id=<?php echo h($post['id']) ?>">
+        <?php echo h($post['title']) ?>
+      </a>
+    </dd>
     <?php endforeach;  ?>
   </dl>
 
